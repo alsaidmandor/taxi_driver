@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:taxi_driver/services/stars.dart';
 import 'package:taxi_driver/utils/style.dart';
 
 Widget loading() {
@@ -93,4 +94,13 @@ void navigateTo(context, widget) => Navigator.push(
 
 void changeScreenReplacement(BuildContext context, Widget widget) {
   Navigator.push(context, MaterialPageRoute(builder: (context) => widget));
+}
+
+stars({double votes, double rating}) {
+  if (votes == 0) {
+    return StarsWidget(numberOfStars: 0);
+  } else {
+    double finalRate = rating / votes;
+    return StarsWidget(numberOfStars: finalRate);
+  }
 }

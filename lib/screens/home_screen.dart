@@ -49,6 +49,59 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Stack(
           children: [
             MapScreen(scaffoldState),
+            Positioned(
+                top: 60,
+                left: MediaQuery.of(context).size.width / 6,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: white,
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [BoxShadow(blurRadius: 17, color: grey)]),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            child: userProvider.userModel?.phone != null
+                                ? CircleAvatar(
+                                    radius: 30,
+                                    child: Icon(
+                                      Icons.person_outline,
+                                      size: 25,
+                                    ),
+                                  )
+                                : CircleAvatar(
+                                    radius: 30,
+                                    backgroundImage: NetworkImage(
+                                        userProvider.userModel?.photo),
+                                  ),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Container(
+                            height: 60,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                customText(
+                                    text: userProvider.userModel.name,
+                                    size: 18,
+                                    weight: FontWeight.bold),
+                                stars(
+                                    votes: userProvider.userModel.votes,
+                                    rating: userProvider.userModel.rating),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ))
           ],
         ),
       ),
