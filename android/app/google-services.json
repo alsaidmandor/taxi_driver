@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841562876984",
+    "project_id": "taxi-drive-20204",
+    "storage_bucket": "taxi-drive-20204.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841562876984:android:b3191c67c9f6efcbe14acd",
+        "android_client_info": {
+          "package_name": "com.saeidmandor.sm.taxi_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841562876984-47a30pv26fo596cl5peln60s9mp4hcqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCmlRgyV6NMGj4oTMipVtzewb7qGKrV_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841562876984-47a30pv26fo596cl5peln60s9mp4hcqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
