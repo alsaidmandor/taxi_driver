@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       icons: Icons.phone),
                   customButton(
                       onTap: () async {
-                        if (!await authProvider.signUp(app.position)) {
+                        if (!await authProvider.signUp()) {
                           showToast("Register failed!", Colors.red);
                           return;
                         }
